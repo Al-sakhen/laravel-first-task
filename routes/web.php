@@ -15,5 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/users', [UserController::class, 'index']);
-Route::get('/books' , [BookController::class, 'index']);
+
+Route::get('/books' , [BookController::class , 'index']);
+Route::get('/books/create' , [BookController::class , 'create'])->name('books.create');
+Route::get('/books/update' , [BookController::class , 'update']);
+
+
+Route::get('/users' , [UserController::class , 'index']);
+Route::get('/users/create' , [UserController::class , 'create'])->name('users.create');
+Route::get('/users/update' , [UserController::class , 'update']);
